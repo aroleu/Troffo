@@ -1,0 +1,137 @@
+# Troffo Component Intelligence
+
+Troffo is a local React component registry designed for both humans and AI agents.
+
+## Machine-readable entry point
+
+- /registry.json — complete structured contracts
+- /llms.txt — this index
+
+## Usage rules
+
+1. Select components by semantic fit using useWhen and avoidWhen.
+2. Import only entries whose status is "local".
+3. Preserve source attribution and license notices.
+4. Entries marked "restricted" are external indexes only; request user-supplied licensed source before implementation.
+
+## Sources
+
+- Troffo Core: local://troffo — Troffo — Local project
+- Beautiful AI: https://beautiful-ui-five.vercel.app/ — Beautiful UI — Local study reference
+- AlignUI · MIT: https://www.alignui.com/ — Doğukan Çavuş — MIT
+- Liquid Metal · MIT: https://metal.jakubantalik.com/ — Jakub Antalik — MIT
+- Border Beam · MIT: https://beam.jakubantalik.com/ — Jakub Antalik — MIT
+- Thinking Orbs · MIT: https://orbs.jakubantalik.com/ — Jakub Antalik & Alex Brinza — MIT
+- Transitions.dev · Free: https://transitions.dev/ — Jakub Antalik — Transitions.dev snippet license
+- Transitions.dev · Pro: https://transitions.dev/pro.html — Jakub Antalik — Restricted / purchase required
+
+## Counts
+
+- 111 catalog entries
+- 102 local and callable entries
+- 9 restricted external indexes
+
+## Local IDs
+
+- troffo-sidebar-shell: @/App.jsx
+- troffo-dashboard-card: @/App.jsx
+- beautiful-approval-card: @/beautiful-ai/components/ApprovalCard
+- beautiful-chat-composer: @/beautiful-ai/components/ChatComposer
+- beautiful-code-block: @/beautiful-ai/components/CodeBlock
+- beautiful-context-cards: @/beautiful-ai/components/ContextCards
+- beautiful-diff-table: @/beautiful-ai/components/DiffTable
+- beautiful-filter-table: @/beautiful-ai/components/FilterTable
+- beautiful-fine-tune-card: @/beautiful-ai/components/FineTuneCard
+- beautiful-insight-cards: @/beautiful-ai/components/InsightCards
+- beautiful-loading-state: @/beautiful-ai/components/LoadingState
+- beautiful-prompt-bar: @/beautiful-ai/components/PromptBar
+- beautiful-recommendation-card: @/beautiful-ai/components/RecommendationCard
+- beautiful-records-table: @/beautiful-ai/components/RecordsTable
+- beautiful-search-list: @/beautiful-ai/components/SearchList
+- beautiful-selection-actions: @/beautiful-ai/components/SelectionActions
+- beautiful-sidebar-nav: @/beautiful-ai/components/SidebarNav
+- beautiful-streaming-text: @/beautiful-ai/components/StreamingText
+- beautiful-task-rows: @/beautiful-ai/components/TaskRows
+- beautiful-thinking-state: @/beautiful-ai/components/ThinkingState
+- beautiful-tool-chips: @/beautiful-ai/components/ToolChips
+- alignui-accordion: @/alignui/components/ui/accordion
+- alignui-alert: @/alignui/components/ui/alert
+- alignui-avatar: @/alignui/components/ui/avatar
+- alignui-avatar-empty-icons: @/alignui/components/ui/avatar-empty-icons
+- alignui-avatar-group: @/alignui/components/ui/avatar-group
+- alignui-avatar-group-compact: @/alignui/components/ui/avatar-group-compact
+- alignui-badge: @/alignui/components/ui/badge
+- alignui-breadcrumb: @/alignui/components/ui/breadcrumb
+- alignui-button: @/alignui/components/ui/button
+- alignui-button-group: @/alignui/components/ui/button-group
+- alignui-checkbox: @/alignui/components/ui/checkbox
+- alignui-color-picker: @/alignui/components/ui/color-picker
+- alignui-command-menu: @/alignui/components/ui/command-menu
+- alignui-compact-button: @/alignui/components/ui/compact-button
+- alignui-datepicker: @/alignui/components/ui/datepicker
+- alignui-digit-input: @/alignui/components/ui/digit-input
+- alignui-divider: @/alignui/components/ui/divider
+- alignui-dot-stepper: @/alignui/components/ui/dot-stepper
+- alignui-drawer: @/alignui/components/ui/drawer
+- alignui-dropdown: @/alignui/components/ui/dropdown
+- alignui-fancy-button: @/alignui/components/ui/fancy-button
+- alignui-file-format-icon: @/alignui/components/ui/file-format-icon
+- alignui-file-upload: @/alignui/components/ui/file-upload
+- alignui-hint: @/alignui/components/ui/hint
+- alignui-horizontal-stepper: @/alignui/components/ui/horizontal-stepper
+- alignui-input: @/alignui/components/ui/input
+- alignui-kbd: @/alignui/components/ui/kbd
+- alignui-label: @/alignui/components/ui/label
+- alignui-link-button: @/alignui/components/ui/link-button
+- alignui-modal: @/alignui/components/ui/modal
+- alignui-notification: @/alignui/components/ui/notification
+- alignui-notification-provider: @/alignui/components/ui/notification-provider
+- alignui-pagination: @/alignui/components/ui/pagination
+- alignui-popover: @/alignui/components/ui/popover
+- alignui-progress-bar: @/alignui/components/ui/progress-bar
+- alignui-progress-circle: @/alignui/components/ui/progress-circle
+- alignui-radio: @/alignui/components/ui/radio
+- alignui-segmented-control: @/alignui/components/ui/segmented-control
+- alignui-select: @/alignui/components/ui/select
+- alignui-slider: @/alignui/components/ui/slider
+- alignui-social-button: @/alignui/components/ui/social-button
+- alignui-status-badge: @/alignui/components/ui/status-badge
+- alignui-svg-rating-icons: @/alignui/components/ui/svg-rating-icons
+- alignui-switch: @/alignui/components/ui/switch
+- alignui-tab-menu-horizontal: @/alignui/components/ui/tab-menu-horizontal
+- alignui-tab-menu-vertical: @/alignui/components/ui/tab-menu-vertical
+- alignui-table: @/alignui/components/ui/table
+- alignui-tag: @/alignui/components/ui/tag
+- alignui-textarea: @/alignui/components/ui/textarea
+- alignui-tooltip: @/alignui/components/ui/tooltip
+- alignui-vertical-stepper: @/alignui/components/ui/vertical-stepper
+- metal-metal-fx: @/effects/metal
+- beam-border-beam: @/effects/beam
+- orbs-thinking-orb: @/effects/orbs
+- transitions-card-resize: @/transitions-dev/recipes/card-resize.md
+- transitions-number-pop-in: @/transitions-dev/recipes/number-pop-in.md
+- transitions-notification-badge: @/transitions-dev/recipes/notification-badge.md
+- transitions-text-states-swap: @/transitions-dev/recipes/text-states-swap.md
+- transitions-menu-dropdown: @/transitions-dev/recipes/menu-dropdown.md
+- transitions-modal: @/transitions-dev/recipes/modal.md
+- transitions-panel-reveal: @/transitions-dev/recipes/panel-reveal.md
+- transitions-page-side-by-side: @/transitions-dev/recipes/page-side-by-side.md
+- transitions-icon-swap: @/transitions-dev/recipes/icon-swap.md
+- transitions-success-check: @/transitions-dev/recipes/success-check.md
+- transitions-avatar-group-hover: @/transitions-dev/recipes/avatar-group-hover.md
+- transitions-error-state-shake: @/transitions-dev/recipes/error-state-shake.md
+- transitions-input-clear-dissolve: @/transitions-dev/recipes/input-clear-dissolve.md
+- transitions-skeleton-reveal: @/transitions-dev/recipes/skeleton-reveal.md
+- transitions-shimmer-text: @/transitions-dev/recipes/shimmer-text.md
+- transitions-tabs-sliding: @/transitions-dev/recipes/tabs-sliding.md
+- transitions-tooltip: @/transitions-dev/recipes/tooltip.md
+- transitions-texts-reveal: @/transitions-dev/recipes/texts-reveal.md
+- transitions-card-tilt: @/transitions-dev/recipes/card-tilt.md
+- transitions-plus-menu-morph: @/transitions-dev/recipes/plus-menu-morph.md
+- transitions-accordion: @/transitions-dev/recipes/accordion.md
+- transitions-toast: @/transitions-dev/recipes/toast.md
+- transitions-like-button: @/transitions-dev/recipes/like-button.md
+- transitions-learn-more-hover: @/transitions-dev/recipes/learn-more-hover.md
+- transitions-checkbox-check: @/transitions-dev/recipes/checkbox-check.md
+- transitions-spinning-counter: @/transitions-dev/recipes/spinning-counter.md
+- transitions-toggle: @/transitions-dev/recipes/toggle.md

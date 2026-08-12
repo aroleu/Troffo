@@ -1,0 +1,3979 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-08-12T03:08:07.788Z",
+  "name": "Troffo Component Intelligence",
+  "description": "Unified component registry for humans and AI agents.",
+  "sources": [
+    {
+      "id": "troffo",
+      "label": "Troffo Core",
+      "shortLabel": "Troffo",
+      "author": "Troffo",
+      "url": "local://troffo",
+      "license": "Local project",
+      "tone": "core"
+    },
+    {
+      "id": "beautiful",
+      "label": "Beautiful AI",
+      "shortLabel": "Beautiful",
+      "author": "Beautiful UI",
+      "url": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "tone": "beautiful"
+    },
+    {
+      "id": "alignui",
+      "label": "AlignUI · MIT",
+      "shortLabel": "AlignUI",
+      "author": "Doğukan Çavuş",
+      "url": "https://www.alignui.com/",
+      "repository": "https://github.com/alignui/alignui-nextjs-typescript-starter",
+      "license": "MIT",
+      "tone": "align"
+    },
+    {
+      "id": "metal",
+      "label": "Liquid Metal · MIT",
+      "shortLabel": "Metal",
+      "author": "Jakub Antalik",
+      "url": "https://metal.jakubantalik.com/",
+      "repository": "https://github.com/Jakubantalik/metal-fx",
+      "license": "MIT",
+      "tone": "metal"
+    },
+    {
+      "id": "beam",
+      "label": "Border Beam · MIT",
+      "shortLabel": "Beam",
+      "author": "Jakub Antalik",
+      "url": "https://beam.jakubantalik.com/",
+      "repository": "https://github.com/Jakubantalik/Libraries/tree/main/packages/border-beam",
+      "license": "MIT",
+      "tone": "beam"
+    },
+    {
+      "id": "orbs",
+      "label": "Thinking Orbs · MIT",
+      "shortLabel": "Orbs",
+      "author": "Jakub Antalik & Alex Brinza",
+      "url": "https://orbs.jakubantalik.com/",
+      "repository": "https://github.com/Jakubantalik/thinking-orbs",
+      "license": "MIT",
+      "tone": "orbs"
+    },
+    {
+      "id": "transitions",
+      "label": "Transitions.dev · Free",
+      "shortLabel": "Transitions",
+      "author": "Jakub Antalik",
+      "url": "https://transitions.dev/",
+      "repository": "https://github.com/Jakubantalik/transitions.dev",
+      "license": "Transitions.dev snippet license",
+      "tone": "transition"
+    },
+    {
+      "id": "transitions-pro",
+      "label": "Transitions.dev · Pro",
+      "shortLabel": "Transitions Pro",
+      "author": "Jakub Antalik",
+      "url": "https://transitions.dev/pro.html",
+      "license": "Restricted / purchase required",
+      "tone": "restricted"
+    }
+  ],
+  "components": [
+    {
+      "id": "troffo-sidebar-shell",
+      "name": "Sidebar Shell",
+      "source": "Troffo Core",
+      "author": "Troffo",
+      "sourceUrl": "local://troffo",
+      "license": "Local project",
+      "status": "local",
+      "kind": "component",
+      "category": "Navigation",
+      "description": "Troffo 原生的 284px 应用侧边栏、项目分组和收起逻辑。",
+      "useWhen": "需要 Sidebar Shell 的Navigation界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/App.jsx",
+      "exports": [
+        "Sidebar"
+      ],
+      "dependencies": [],
+      "props": [],
+      "example": "import Component from '@/App.jsx'\n\n<Component />"
+    },
+    {
+      "id": "troffo-dashboard-card",
+      "name": "Dashboard Card",
+      "source": "Troffo Core",
+      "author": "Troffo",
+      "sourceUrl": "local://troffo",
+      "license": "Local project",
+      "status": "local",
+      "kind": "component",
+      "category": "Dashboard",
+      "description": "Troffo 原生 KPI、数据卡和图表容器视觉。",
+      "useWhen": "需要 Dashboard Card 的Dashboard界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/App.jsx",
+      "exports": [
+        "Kpi",
+        "SpendingsChart"
+      ],
+      "dependencies": [],
+      "props": [],
+      "example": "import Component from '@/App.jsx'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-approval-card",
+      "name": "ApprovalCard",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI Cards",
+      "description": "面向 AI 产品工作流的 ApprovalCard 视觉组件。",
+      "useWhen": "需要 ApprovalCard 的AI Cards界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/ApprovalCard",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/ApprovalCard'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-chat-composer",
+      "name": "ChatComposer",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI Input",
+      "description": "面向 AI 产品工作流的 ChatComposer 视觉组件。",
+      "useWhen": "需要 ChatComposer 的AI Input界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/ChatComposer",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/ChatComposer'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-code-block",
+      "name": "CodeBlock",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI Cards",
+      "description": "面向 AI 产品工作流的 CodeBlock 视觉组件。",
+      "useWhen": "需要 CodeBlock 的AI Cards界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/CodeBlock",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/CodeBlock'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-context-cards",
+      "name": "ContextCards",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI Cards",
+      "description": "面向 AI 产品工作流的 ContextCards 视觉组件。",
+      "useWhen": "需要 ContextCards 的AI Cards界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/ContextCards",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/ContextCards'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-diff-table",
+      "name": "DiffTable",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "Data & Tables",
+      "description": "面向 AI 产品工作流的 DiffTable 视觉组件。",
+      "useWhen": "需要 DiffTable 的Data & Tables界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/DiffTable",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/DiffTable'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-filter-table",
+      "name": "FilterTable",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "Data & Tables",
+      "description": "面向 AI 产品工作流的 FilterTable 视觉组件。",
+      "useWhen": "需要 FilterTable 的Data & Tables界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/FilterTable",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/FilterTable'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-fine-tune-card",
+      "name": "FineTuneCard",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI Cards",
+      "description": "面向 AI 产品工作流的 FineTuneCard 视觉组件。",
+      "useWhen": "需要 FineTuneCard 的AI Cards界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/FineTuneCard",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/FineTuneCard'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-insight-cards",
+      "name": "InsightCards",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI Cards",
+      "description": "面向 AI 产品工作流的 InsightCards 视觉组件。",
+      "useWhen": "需要 InsightCards 的AI Cards界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/InsightCards",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/InsightCards'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-loading-state",
+      "name": "LoadingState",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI States",
+      "description": "面向 AI 产品工作流的 LoadingState 视觉组件。",
+      "useWhen": "需要 LoadingState 的AI States界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/LoadingState",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/LoadingState'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-prompt-bar",
+      "name": "PromptBar",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI Input",
+      "description": "面向 AI 产品工作流的 PromptBar 视觉组件。",
+      "useWhen": "需要 PromptBar 的AI Input界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/PromptBar",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/PromptBar'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-recommendation-card",
+      "name": "RecommendationCard",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI Cards",
+      "description": "面向 AI 产品工作流的 RecommendationCard 视觉组件。",
+      "useWhen": "需要 RecommendationCard 的AI Cards界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/RecommendationCard",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/RecommendationCard'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-records-table",
+      "name": "RecordsTable",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "Data & Tables",
+      "description": "面向 AI 产品工作流的 RecordsTable 视觉组件。",
+      "useWhen": "需要 RecordsTable 的Data & Tables界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/RecordsTable",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/RecordsTable'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-search-list",
+      "name": "SearchList",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI Input",
+      "description": "面向 AI 产品工作流的 SearchList 视觉组件。",
+      "useWhen": "需要 SearchList 的AI Input界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/SearchList",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/SearchList'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-selection-actions",
+      "name": "SelectionActions",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "Agent Actions",
+      "description": "面向 AI 产品工作流的 SelectionActions 视觉组件。",
+      "useWhen": "需要 SelectionActions 的Agent Actions界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/SelectionActions",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/SelectionActions'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-sidebar-nav",
+      "name": "SidebarNav",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "Agent Actions",
+      "description": "面向 AI 产品工作流的 SidebarNav 视觉组件。",
+      "useWhen": "需要 SidebarNav 的Agent Actions界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/SidebarNav",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/SidebarNav'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-streaming-text",
+      "name": "StreamingText",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI States",
+      "description": "面向 AI 产品工作流的 StreamingText 视觉组件。",
+      "useWhen": "需要 StreamingText 的AI States界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/StreamingText",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/StreamingText'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-task-rows",
+      "name": "TaskRows",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI Cards",
+      "description": "面向 AI 产品工作流的 TaskRows 视觉组件。",
+      "useWhen": "需要 TaskRows 的AI Cards界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/TaskRows",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/TaskRows'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-thinking-state",
+      "name": "ThinkingState",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "AI States",
+      "description": "面向 AI 产品工作流的 ThinkingState 视觉组件。",
+      "useWhen": "需要 ThinkingState 的AI States界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/ThinkingState",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/ThinkingState'\n\n<Component />"
+    },
+    {
+      "id": "beautiful-tool-chips",
+      "name": "ToolChips",
+      "source": "Beautiful AI",
+      "author": "Beautiful UI",
+      "sourceUrl": "https://beautiful-ui-five.vercel.app/",
+      "license": "Local study reference",
+      "status": "local",
+      "kind": "component",
+      "category": "Agent Actions",
+      "description": "面向 AI 产品工作流的 ToolChips 视觉组件。",
+      "useWhen": "需要 ToolChips 的Agent Actions界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/beautiful-ai/components/ToolChips",
+      "exports": [
+        "default"
+      ],
+      "dependencies": [
+        "React",
+        "Beautiful AI compiled styles"
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "example": "import Component from '@/beautiful-ai/components/ToolChips'\n\n<Component />"
+    },
+    {
+      "id": "alignui-accordion",
+      "name": "Accordion",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Actions & Layout",
+      "description": "可折叠内容组，基于 Radix Accordion。",
+      "useWhen": "需要 Accordion 的Actions & Layout界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/accordion",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Accordion from '@/alignui/components/ui/accordion'\n\n<Accordion.Root />"
+    },
+    {
+      "id": "alignui-alert",
+      "name": "Alert",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Actions & Layout",
+      "description": "带状态、图标和关闭操作的反馈容器。",
+      "useWhen": "需要 Alert 的Actions & Layout界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/alert",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Alert from '@/alignui/components/ui/alert'\n\n<Alert.Root />"
+    },
+    {
+      "id": "alignui-avatar",
+      "name": "Avatar",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Data Display",
+      "description": "用户或组织头像，支持状态、品牌标和通知。",
+      "useWhen": "需要 Avatar 的Data Display界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/avatar",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Avatar from '@/alignui/components/ui/avatar'\n\n<Avatar.Root />"
+    },
+    {
+      "id": "alignui-avatar-empty-icons",
+      "name": "Avatar Empty Icons",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Data Display",
+      "description": "AlignUI 官方开源 Avatar Empty Icons 基础组件。",
+      "useWhen": "需要 Avatar Empty Icons 的Data Display界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/avatar-empty-icons",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as AvatarEmptyIcons from '@/alignui/components/ui/avatar-empty-icons'\n\n<AvatarEmptyIcons.Root />"
+    },
+    {
+      "id": "alignui-avatar-group",
+      "name": "Avatar Group",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Data Display",
+      "description": "AlignUI 官方开源 Avatar Group 基础组件。",
+      "useWhen": "需要 Avatar Group 的Data Display界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/avatar-group",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as AvatarGroup from '@/alignui/components/ui/avatar-group'\n\n<AvatarGroup.Root />"
+    },
+    {
+      "id": "alignui-avatar-group-compact",
+      "name": "Avatar Group Compact",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Data Display",
+      "description": "AlignUI 官方开源 Avatar Group Compact 基础组件。",
+      "useWhen": "需要 Avatar Group Compact 的Data Display界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/avatar-group-compact",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as AvatarGroupCompact from '@/alignui/components/ui/avatar-group-compact'\n\n<AvatarGroupCompact.Root />"
+    },
+    {
+      "id": "alignui-badge",
+      "name": "Badge",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Data Display",
+      "description": "AlignUI 官方开源 Badge 基础组件。",
+      "useWhen": "需要 Badge 的Data Display界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/badge",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Badge from '@/alignui/components/ui/badge'\n\n<Badge.Root />"
+    },
+    {
+      "id": "alignui-breadcrumb",
+      "name": "Breadcrumb",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Navigation",
+      "description": "AlignUI 官方开源 Breadcrumb 基础组件。",
+      "useWhen": "需要 Breadcrumb 的Navigation界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/breadcrumb",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Breadcrumb from '@/alignui/components/ui/breadcrumb'\n\n<Breadcrumb.Root />"
+    },
+    {
+      "id": "alignui-button",
+      "name": "Button",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Actions & Layout",
+      "description": "AlignUI 主按钮，包含三种语义、四种模式与四种尺寸。",
+      "useWhen": "需要 Button 的Actions & Layout界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/button",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Button from '@/alignui/components/ui/button'\n\n<Button.Root />"
+    },
+    {
+      "id": "alignui-button-group",
+      "name": "Button Group",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Actions & Layout",
+      "description": "AlignUI 官方开源 Button Group 基础组件。",
+      "useWhen": "需要 Button Group 的Actions & Layout界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/button-group",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as ButtonGroup from '@/alignui/components/ui/button-group'\n\n<ButtonGroup.Root />"
+    },
+    {
+      "id": "alignui-checkbox",
+      "name": "Checkbox",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Forms",
+      "description": "AlignUI 官方开源 Checkbox 基础组件。",
+      "useWhen": "需要 Checkbox 的Forms界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/checkbox",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Checkbox from '@/alignui/components/ui/checkbox'\n\n<Checkbox.Root />"
+    },
+    {
+      "id": "alignui-color-picker",
+      "name": "Color Picker",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Forms",
+      "description": "AlignUI 官方开源 Color Picker 基础组件。",
+      "useWhen": "需要 Color Picker 的Forms界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/color-picker",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as ColorPicker from '@/alignui/components/ui/color-picker'\n\n<ColorPicker.Root />"
+    },
+    {
+      "id": "alignui-command-menu",
+      "name": "Command Menu",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Navigation",
+      "description": "AlignUI 官方开源 Command Menu 基础组件。",
+      "useWhen": "需要 Command Menu 的Navigation界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/command-menu",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as CommandMenu from '@/alignui/components/ui/command-menu'\n\n<CommandMenu.Root />"
+    },
+    {
+      "id": "alignui-compact-button",
+      "name": "Compact Button",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Actions & Layout",
+      "description": "AlignUI 官方开源 Compact Button 基础组件。",
+      "useWhen": "需要 Compact Button 的Actions & Layout界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/compact-button",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as CompactButton from '@/alignui/components/ui/compact-button'\n\n<CompactButton.Root />"
+    },
+    {
+      "id": "alignui-datepicker",
+      "name": "Datepicker",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Forms",
+      "description": "AlignUI 官方开源 Datepicker 基础组件。",
+      "useWhen": "需要 Datepicker 的Forms界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/datepicker",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Datepicker from '@/alignui/components/ui/datepicker'\n\n<Datepicker.Root />"
+    },
+    {
+      "id": "alignui-digit-input",
+      "name": "Digit Input",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Forms",
+      "description": "AlignUI 官方开源 Digit Input 基础组件。",
+      "useWhen": "需要 Digit Input 的Forms界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/digit-input",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as DigitInput from '@/alignui/components/ui/digit-input'\n\n<DigitInput.Root />"
+    },
+    {
+      "id": "alignui-divider",
+      "name": "Divider",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Actions & Layout",
+      "description": "AlignUI 官方开源 Divider 基础组件。",
+      "useWhen": "需要 Divider 的Actions & Layout界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/divider",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Divider from '@/alignui/components/ui/divider'\n\n<Divider.Root />"
+    },
+    {
+      "id": "alignui-dot-stepper",
+      "name": "Dot Stepper",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Navigation",
+      "description": "AlignUI 官方开源 Dot Stepper 基础组件。",
+      "useWhen": "需要 Dot Stepper 的Navigation界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/dot-stepper",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as DotStepper from '@/alignui/components/ui/dot-stepper'\n\n<DotStepper.Root />"
+    },
+    {
+      "id": "alignui-drawer",
+      "name": "Drawer",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Overlays",
+      "description": "AlignUI 官方开源 Drawer 基础组件。",
+      "useWhen": "需要 Drawer 的Overlays界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/drawer",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Drawer from '@/alignui/components/ui/drawer'\n\n<Drawer.Root />"
+    },
+    {
+      "id": "alignui-dropdown",
+      "name": "Dropdown",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Overlays",
+      "description": "AlignUI 官方开源 Dropdown 基础组件。",
+      "useWhen": "需要 Dropdown 的Overlays界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/dropdown",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Dropdown from '@/alignui/components/ui/dropdown'\n\n<Dropdown.Root />"
+    },
+    {
+      "id": "alignui-fancy-button",
+      "name": "Fancy Button",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Actions & Layout",
+      "description": "AlignUI 官方开源 Fancy Button 基础组件。",
+      "useWhen": "需要 Fancy Button 的Actions & Layout界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/fancy-button",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as FancyButton from '@/alignui/components/ui/fancy-button'\n\n<FancyButton.Root />"
+    },
+    {
+      "id": "alignui-file-format-icon",
+      "name": "File Format Icon",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Data Display",
+      "description": "AlignUI 官方开源 File Format Icon 基础组件。",
+      "useWhen": "需要 File Format Icon 的Data Display界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/file-format-icon",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as FileFormatIcon from '@/alignui/components/ui/file-format-icon'\n\n<FileFormatIcon.Root />"
+    },
+    {
+      "id": "alignui-file-upload",
+      "name": "File Upload",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Forms",
+      "description": "AlignUI 官方开源 File Upload 基础组件。",
+      "useWhen": "需要 File Upload 的Forms界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/file-upload",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as FileUpload from '@/alignui/components/ui/file-upload'\n\n<FileUpload.Root />"
+    },
+    {
+      "id": "alignui-hint",
+      "name": "Hint",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Actions & Layout",
+      "description": "AlignUI 官方开源 Hint 基础组件。",
+      "useWhen": "需要 Hint 的Actions & Layout界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/hint",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Hint from '@/alignui/components/ui/hint'\n\n<Hint.Root />"
+    },
+    {
+      "id": "alignui-horizontal-stepper",
+      "name": "Horizontal Stepper",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Navigation",
+      "description": "AlignUI 官方开源 Horizontal Stepper 基础组件。",
+      "useWhen": "需要 Horizontal Stepper 的Navigation界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/horizontal-stepper",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as HorizontalStepper from '@/alignui/components/ui/horizontal-stepper'\n\n<HorizontalStepper.Root />"
+    },
+    {
+      "id": "alignui-input",
+      "name": "Input",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Forms",
+      "description": "带图标、前后缀、错误状态和尺寸的输入控件。",
+      "useWhen": "需要 Input 的Forms界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/input",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Input from '@/alignui/components/ui/input'\n\n<Input.Root />"
+    },
+    {
+      "id": "alignui-kbd",
+      "name": "Kbd",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Actions & Layout",
+      "description": "AlignUI 官方开源 Kbd 基础组件。",
+      "useWhen": "需要 Kbd 的Actions & Layout界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/kbd",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Kbd from '@/alignui/components/ui/kbd'\n\n<Kbd.Root />"
+    },
+    {
+      "id": "alignui-label",
+      "name": "Label",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Forms",
+      "description": "AlignUI 官方开源 Label 基础组件。",
+      "useWhen": "需要 Label 的Forms界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/label",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Label from '@/alignui/components/ui/label'\n\n<Label.Root />"
+    },
+    {
+      "id": "alignui-link-button",
+      "name": "Link Button",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Actions & Layout",
+      "description": "AlignUI 官方开源 Link Button 基础组件。",
+      "useWhen": "需要 Link Button 的Actions & Layout界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/link-button",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as LinkButton from '@/alignui/components/ui/link-button'\n\n<LinkButton.Root />"
+    },
+    {
+      "id": "alignui-modal",
+      "name": "Modal",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Overlays",
+      "description": "AlignUI 官方开源 Modal 基础组件。",
+      "useWhen": "需要 Modal 的Overlays界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/modal",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Modal from '@/alignui/components/ui/modal'\n\n<Modal.Root />"
+    },
+    {
+      "id": "alignui-notification",
+      "name": "Notification",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Overlays",
+      "description": "AlignUI 官方开源 Notification 基础组件。",
+      "useWhen": "需要 Notification 的Overlays界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/notification",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Notification from '@/alignui/components/ui/notification'\n\n<Notification.Root />"
+    },
+    {
+      "id": "alignui-notification-provider",
+      "name": "Notification Provider",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Overlays",
+      "description": "AlignUI 官方开源 Notification Provider 基础组件。",
+      "useWhen": "需要 Notification Provider 的Overlays界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/notification-provider",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as NotificationProvider from '@/alignui/components/ui/notification-provider'\n\n<NotificationProvider.Root />"
+    },
+    {
+      "id": "alignui-pagination",
+      "name": "Pagination",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Navigation",
+      "description": "AlignUI 官方开源 Pagination 基础组件。",
+      "useWhen": "需要 Pagination 的Navigation界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/pagination",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Pagination from '@/alignui/components/ui/pagination'\n\n<Pagination.Root />"
+    },
+    {
+      "id": "alignui-popover",
+      "name": "Popover",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Overlays",
+      "description": "AlignUI 官方开源 Popover 基础组件。",
+      "useWhen": "需要 Popover 的Overlays界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/popover",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Popover from '@/alignui/components/ui/popover'\n\n<Popover.Root />"
+    },
+    {
+      "id": "alignui-progress-bar",
+      "name": "Progress Bar",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Data Display",
+      "description": "AlignUI 官方开源 Progress Bar 基础组件。",
+      "useWhen": "需要 Progress Bar 的Data Display界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/progress-bar",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as ProgressBar from '@/alignui/components/ui/progress-bar'\n\n<ProgressBar.Root />"
+    },
+    {
+      "id": "alignui-progress-circle",
+      "name": "Progress Circle",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Data Display",
+      "description": "AlignUI 官方开源 Progress Circle 基础组件。",
+      "useWhen": "需要 Progress Circle 的Data Display界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/progress-circle",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as ProgressCircle from '@/alignui/components/ui/progress-circle'\n\n<ProgressCircle.Root />"
+    },
+    {
+      "id": "alignui-radio",
+      "name": "Radio",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Forms",
+      "description": "AlignUI 官方开源 Radio 基础组件。",
+      "useWhen": "需要 Radio 的Forms界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/radio",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Radio from '@/alignui/components/ui/radio'\n\n<Radio.Root />"
+    },
+    {
+      "id": "alignui-segmented-control",
+      "name": "Segmented Control",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Navigation",
+      "description": "AlignUI 官方开源 Segmented Control 基础组件。",
+      "useWhen": "需要 Segmented Control 的Navigation界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/segmented-control",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as SegmentedControl from '@/alignui/components/ui/segmented-control'\n\n<SegmentedControl.Root />"
+    },
+    {
+      "id": "alignui-select",
+      "name": "Select",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Forms",
+      "description": "支持分组、滚动与图标的无障碍选择器。",
+      "useWhen": "需要 Select 的Forms界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/select",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Select from '@/alignui/components/ui/select'\n\n<Select.Root />"
+    },
+    {
+      "id": "alignui-slider",
+      "name": "Slider",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Forms",
+      "description": "AlignUI 官方开源 Slider 基础组件。",
+      "useWhen": "需要 Slider 的Forms界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/slider",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Slider from '@/alignui/components/ui/slider'\n\n<Slider.Root />"
+    },
+    {
+      "id": "alignui-social-button",
+      "name": "Social Button",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Actions & Layout",
+      "description": "AlignUI 官方开源 Social Button 基础组件。",
+      "useWhen": "需要 Social Button 的Actions & Layout界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/social-button",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as SocialButton from '@/alignui/components/ui/social-button'\n\n<SocialButton.Root />"
+    },
+    {
+      "id": "alignui-status-badge",
+      "name": "Status Badge",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Data Display",
+      "description": "AlignUI 官方开源 Status Badge 基础组件。",
+      "useWhen": "需要 Status Badge 的Data Display界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/status-badge",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as StatusBadge from '@/alignui/components/ui/status-badge'\n\n<StatusBadge.Root />"
+    },
+    {
+      "id": "alignui-svg-rating-icons",
+      "name": "Svg Rating Icons",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Data Display",
+      "description": "AlignUI 官方开源 Svg Rating Icons 基础组件。",
+      "useWhen": "需要 Svg Rating Icons 的Data Display界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/svg-rating-icons",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as SvgRatingIcons from '@/alignui/components/ui/svg-rating-icons'\n\n<SvgRatingIcons.Root />"
+    },
+    {
+      "id": "alignui-switch",
+      "name": "Switch",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Forms",
+      "description": "AlignUI 官方开源 Switch 基础组件。",
+      "useWhen": "需要 Switch 的Forms界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/switch",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Switch from '@/alignui/components/ui/switch'\n\n<Switch.Root />"
+    },
+    {
+      "id": "alignui-tab-menu-horizontal",
+      "name": "Tab Menu Horizontal",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Navigation",
+      "description": "AlignUI 官方开源 Tab Menu Horizontal 基础组件。",
+      "useWhen": "需要 Tab Menu Horizontal 的Navigation界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/tab-menu-horizontal",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as TabMenuHorizontal from '@/alignui/components/ui/tab-menu-horizontal'\n\n<TabMenuHorizontal.Root />"
+    },
+    {
+      "id": "alignui-tab-menu-vertical",
+      "name": "Tab Menu Vertical",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Navigation",
+      "description": "AlignUI 官方开源 Tab Menu Vertical 基础组件。",
+      "useWhen": "需要 Tab Menu Vertical 的Navigation界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/tab-menu-vertical",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as TabMenuVertical from '@/alignui/components/ui/tab-menu-vertical'\n\n<TabMenuVertical.Root />"
+    },
+    {
+      "id": "alignui-table",
+      "name": "Table",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Data Display",
+      "description": "带悬浮行、分隔和语义单元格的数据表。",
+      "useWhen": "需要 Table 的Data Display界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/table",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Table from '@/alignui/components/ui/table'\n\n<Table.Root />"
+    },
+    {
+      "id": "alignui-tag",
+      "name": "Tag",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Data Display",
+      "description": "AlignUI 官方开源 Tag 基础组件。",
+      "useWhen": "需要 Tag 的Data Display界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/tag",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Tag from '@/alignui/components/ui/tag'\n\n<Tag.Root />"
+    },
+    {
+      "id": "alignui-textarea",
+      "name": "Textarea",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Forms",
+      "description": "AlignUI 官方开源 Textarea 基础组件。",
+      "useWhen": "需要 Textarea 的Forms界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/textarea",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Textarea from '@/alignui/components/ui/textarea'\n\n<Textarea.Root />"
+    },
+    {
+      "id": "alignui-tooltip",
+      "name": "Tooltip",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Overlays",
+      "description": "AlignUI 官方开源 Tooltip 基础组件。",
+      "useWhen": "需要 Tooltip 的Overlays界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/tooltip",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as Tooltip from '@/alignui/components/ui/tooltip'\n\n<Tooltip.Root />"
+    },
+    {
+      "id": "alignui-vertical-stepper",
+      "name": "Vertical Stepper",
+      "source": "AlignUI · MIT",
+      "author": "Doğukan Çavuş",
+      "sourceUrl": "https://www.alignui.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Navigation",
+      "description": "AlignUI 官方开源 Vertical Stepper 基础组件。",
+      "useWhen": "需要 Vertical Stepper 的Navigation界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/alignui/components/ui/vertical-stepper",
+      "exports": [
+        "Root",
+        "相关子组件"
+      ],
+      "dependencies": [
+        "React",
+        "Tailwind CSS",
+        "Radix / Remix Icon（按组件）"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "variant / size",
+          "type": "component specific",
+          "required": false
+        }
+      ],
+      "example": "import * as VerticalStepper from '@/alignui/components/ui/vertical-stepper'\n\n<VerticalStepper.Root />"
+    },
+    {
+      "id": "metal-metal-fx",
+      "name": "MetalFx",
+      "source": "Liquid Metal · MIT",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://metal.jakubantalik.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Effects",
+      "description": "实时 WebGL 液态金属边框，可包裹按钮或任意单一元素。",
+      "useWhen": "需要 MetalFx 的Effects界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/effects/metal",
+      "exports": [
+        "MetalFx"
+      ],
+      "dependencies": [
+        "React",
+        "WebGL"
+      ],
+      "props": [
+        {
+          "name": "preset",
+          "type": "'chromatic' | 'silver' | 'gold'",
+          "default": "chromatic"
+        },
+        {
+          "name": "strength",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "name": "variant",
+          "type": "'button' | 'circle'",
+          "default": "button"
+        }
+      ],
+      "example": "import { MetalFx } from '@/effects/metal'\n\n<MetalFx preset=\"chromatic\"><button>Upgrade</button></MetalFx>"
+    },
+    {
+      "id": "beam-border-beam",
+      "name": "BorderBeam",
+      "source": "Border Beam · MIT",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://beam.jakubantalik.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "Effects",
+      "description": "围绕内容旋转或呼吸的彩色光束边框。",
+      "useWhen": "需要 BorderBeam 的Effects界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/effects/beam",
+      "exports": [
+        "BorderBeam"
+      ],
+      "dependencies": [
+        "React",
+        "CSS masks"
+      ],
+      "props": [
+        {
+          "name": "size",
+          "type": "'sm' | 'md' | 'line' | 'pulse-inner' | 'pulse-outside'",
+          "default": "md"
+        },
+        {
+          "name": "colorVariant",
+          "type": "'colorful' | 'mono' | 'ocean' | 'sunset'",
+          "default": "colorful"
+        },
+        {
+          "name": "strength",
+          "type": "number",
+          "default": 1
+        }
+      ],
+      "example": "import { BorderBeam } from '@/effects/beam'\n\n<BorderBeam><div>Build anything...</div></BorderBeam>"
+    },
+    {
+      "id": "orbs-thinking-orb",
+      "name": "ThinkingOrb",
+      "source": "Thinking Orbs · MIT",
+      "author": "Jakub Antalik & Alex Brinza",
+      "sourceUrl": "https://orbs.jakubantalik.com/",
+      "license": "MIT",
+      "status": "local",
+      "kind": "component",
+      "category": "AI States",
+      "description": "AI 与 Agent 界面的九种点阵思考状态动画。",
+      "useWhen": "需要 ThinkingOrb 的AI States界面时",
+      "avoidWhen": "需求与组件语义不匹配，或仅需简单静态文本时",
+      "importPath": "@/effects/orbs",
+      "exports": [
+        "ThinkingOrb"
+      ],
+      "dependencies": [
+        "React",
+        "Canvas 2D"
+      ],
+      "props": [
+        {
+          "name": "state",
+          "type": "working | searching | solving | listening | …",
+          "default": "working"
+        },
+        {
+          "name": "size",
+          "type": "64 | 20",
+          "default": 64
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "default": 1
+        }
+      ],
+      "example": "import { ThinkingOrb } from '@/effects/orbs'\n\n<ThinkingOrb state=\"listening\" size={64} />"
+    },
+    {
+      "id": "transitions-card-resize",
+      "name": "Card resize",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Card resize 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Card resize 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/card-resize.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/card-resize.md"
+    },
+    {
+      "id": "transitions-number-pop-in",
+      "name": "Number pop-in",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Number pop-in 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Number pop-in 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/number-pop-in.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/number-pop-in.md"
+    },
+    {
+      "id": "transitions-notification-badge",
+      "name": "Notification badge",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Notification badge 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Notification badge 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/notification-badge.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/notification-badge.md"
+    },
+    {
+      "id": "transitions-text-states-swap",
+      "name": "Text states swap",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Text states swap 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Text states swap 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/text-states-swap.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/text-states-swap.md"
+    },
+    {
+      "id": "transitions-menu-dropdown",
+      "name": "Menu dropdown",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Menu dropdown 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Menu dropdown 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/menu-dropdown.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/menu-dropdown.md"
+    },
+    {
+      "id": "transitions-modal",
+      "name": "Modal open / close",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Modal open / close 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Modal open / close 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/modal.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/modal.md"
+    },
+    {
+      "id": "transitions-panel-reveal",
+      "name": "Panel reveal",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Panel reveal 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Panel reveal 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/panel-reveal.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/panel-reveal.md"
+    },
+    {
+      "id": "transitions-page-side-by-side",
+      "name": "Page side-by-side",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Page side-by-side 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Page side-by-side 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/page-side-by-side.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/page-side-by-side.md"
+    },
+    {
+      "id": "transitions-icon-swap",
+      "name": "Icon swap",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Icon swap 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Icon swap 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/icon-swap.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/icon-swap.md"
+    },
+    {
+      "id": "transitions-success-check",
+      "name": "Success check",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Success check 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Success check 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/success-check.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/success-check.md"
+    },
+    {
+      "id": "transitions-avatar-group-hover",
+      "name": "Avatar group hover",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Avatar group hover 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Avatar group hover 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/avatar-group-hover.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/avatar-group-hover.md"
+    },
+    {
+      "id": "transitions-error-state-shake",
+      "name": "Error state shake",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Error state shake 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Error state shake 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/error-state-shake.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/error-state-shake.md"
+    },
+    {
+      "id": "transitions-input-clear-dissolve",
+      "name": "Input clear with dissolve",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Input clear with dissolve 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Input clear with dissolve 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/input-clear-dissolve.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/input-clear-dissolve.md"
+    },
+    {
+      "id": "transitions-skeleton-reveal",
+      "name": "Skeleton loader and reveal",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Skeleton loader and reveal 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Skeleton loader and reveal 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/skeleton-reveal.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/skeleton-reveal.md"
+    },
+    {
+      "id": "transitions-shimmer-text",
+      "name": "Shimmer text",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Shimmer text 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Shimmer text 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/shimmer-text.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/shimmer-text.md"
+    },
+    {
+      "id": "transitions-tabs-sliding",
+      "name": "Tabs sliding",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Tabs sliding 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Tabs sliding 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/tabs-sliding.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/tabs-sliding.md"
+    },
+    {
+      "id": "transitions-tooltip",
+      "name": "Tooltip open / close",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Tooltip open / close 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Tooltip open / close 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/tooltip.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/tooltip.md"
+    },
+    {
+      "id": "transitions-texts-reveal",
+      "name": "Texts reveal",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Texts reveal 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Texts reveal 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/texts-reveal.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/texts-reveal.md"
+    },
+    {
+      "id": "transitions-card-tilt",
+      "name": "3D tilt",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 3D tilt 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 3D tilt 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/card-tilt.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/card-tilt.md"
+    },
+    {
+      "id": "transitions-plus-menu-morph",
+      "name": "Dropdown menu morph",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Dropdown menu morph 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Dropdown menu morph 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/plus-menu-morph.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/plus-menu-morph.md"
+    },
+    {
+      "id": "transitions-accordion",
+      "name": "Accordion",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Accordion 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Accordion 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/accordion.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/accordion.md"
+    },
+    {
+      "id": "transitions-toast",
+      "name": "Toast open / close",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Toast open / close 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Toast open / close 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/toast.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/toast.md"
+    },
+    {
+      "id": "transitions-like-button",
+      "name": "Like button",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Like button 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Like button 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/like-button.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/like-button.md"
+    },
+    {
+      "id": "transitions-learn-more-hover",
+      "name": "Learn more hover",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Learn more hover 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Learn more hover 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/learn-more-hover.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/learn-more-hover.md"
+    },
+    {
+      "id": "transitions-checkbox-check",
+      "name": "Checkbox check",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Checkbox check 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Checkbox check 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/checkbox-check.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/checkbox-check.md"
+    },
+    {
+      "id": "transitions-spinning-counter",
+      "name": "Spinning counter",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Spinning counter 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Spinning counter 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/spinning-counter.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/spinning-counter.md"
+    },
+    {
+      "id": "transitions-toggle",
+      "name": "Toggle",
+      "source": "Transitions.dev · Free",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/",
+      "license": "Transitions.dev snippet license",
+      "status": "local",
+      "kind": "recipe",
+      "category": "Motion",
+      "description": "Transitions.dev 的 Toggle 免费 CSS / React 过渡配方。",
+      "useWhen": "界面需要 Toggle 动效反馈时",
+      "avoidWhen": "用户启用减少动态效果且没有提供静态回退时",
+      "importPath": "@/transitions-dev/recipes/toggle.md",
+      "exports": [
+        "CSS recipe",
+        "React recipe when provided"
+      ],
+      "dependencies": [
+        "CSS custom properties",
+        "React optional"
+      ],
+      "props": [
+        {
+          "name": "motion tokens",
+          "type": "CSS custom properties",
+          "required": false
+        }
+      ],
+      "example": "Read and apply: src/transitions-dev/recipes/toggle.md"
+    },
+    {
+      "id": "transitions-pro-confetti-burst",
+      "name": "Confetti burst",
+      "source": "Transitions.dev · Pro",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/pro.html",
+      "license": "Restricted / purchase required",
+      "status": "restricted",
+      "kind": "external",
+      "category": "Motion · Pro",
+      "description": "Confetti burst 是 Transitions.dev Pro 受限组件；本地仅保留索引。",
+      "useWhen": "已合法购买并将源码放入本地后再接入",
+      "avoidWhen": "未获得 Pro 下载权限时不要复制或生成替代源码",
+      "importPath": null,
+      "exports": [],
+      "dependencies": [],
+      "props": [],
+      "example": "",
+      "externalUrl": "https://transitions.dev/detail.html?t=confetti-burst"
+    },
+    {
+      "id": "transitions-pro-gooey-plus-menu",
+      "name": "Gooey plus menu",
+      "source": "Transitions.dev · Pro",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/pro.html",
+      "license": "Restricted / purchase required",
+      "status": "restricted",
+      "kind": "external",
+      "category": "Motion · Pro",
+      "description": "Gooey plus menu 是 Transitions.dev Pro 受限组件；本地仅保留索引。",
+      "useWhen": "已合法购买并将源码放入本地后再接入",
+      "avoidWhen": "未获得 Pro 下载权限时不要复制或生成替代源码",
+      "importPath": null,
+      "exports": [],
+      "dependencies": [],
+      "props": [],
+      "example": "",
+      "externalUrl": "https://transitions.dev/detail.html?t=gooey-plus-menu"
+    },
+    {
+      "id": "transitions-pro-card-stack-hover",
+      "name": "Card stack hover",
+      "source": "Transitions.dev · Pro",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/pro.html",
+      "license": "Restricted / purchase required",
+      "status": "restricted",
+      "kind": "external",
+      "category": "Motion · Pro",
+      "description": "Card stack hover 是 Transitions.dev Pro 受限组件；本地仅保留索引。",
+      "useWhen": "已合法购买并将源码放入本地后再接入",
+      "avoidWhen": "未获得 Pro 下载权限时不要复制或生成替代源码",
+      "importPath": null,
+      "exports": [],
+      "dependencies": [],
+      "props": [],
+      "example": "",
+      "externalUrl": "https://transitions.dev/detail.html?t=card-stack-hover"
+    },
+    {
+      "id": "transitions-pro-organic-shimmer",
+      "name": "Organic shimmer",
+      "source": "Transitions.dev · Pro",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/pro.html",
+      "license": "Restricted / purchase required",
+      "status": "restricted",
+      "kind": "external",
+      "category": "Motion · Pro",
+      "description": "Organic shimmer 是 Transitions.dev Pro 受限组件；本地仅保留索引。",
+      "useWhen": "已合法购买并将源码放入本地后再接入",
+      "avoidWhen": "未获得 Pro 下载权限时不要复制或生成替代源码",
+      "importPath": null,
+      "exports": [],
+      "dependencies": [],
+      "props": [],
+      "example": "",
+      "externalUrl": "https://transitions.dev/detail.html?t=organic-shimmer"
+    },
+    {
+      "id": "transitions-pro-drag-drop-with-physics",
+      "name": "Drag & drop with physics",
+      "source": "Transitions.dev · Pro",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/pro.html",
+      "license": "Restricted / purchase required",
+      "status": "restricted",
+      "kind": "external",
+      "category": "Motion · Pro",
+      "description": "Drag & drop with physics 是 Transitions.dev Pro 受限组件；本地仅保留索引。",
+      "useWhen": "已合法购买并将源码放入本地后再接入",
+      "avoidWhen": "未获得 Pro 下载权限时不要复制或生成替代源码",
+      "importPath": null,
+      "exports": [],
+      "dependencies": [],
+      "props": [],
+      "example": "",
+      "externalUrl": "https://transitions.dev/detail.html?t=drag-drop-with-physics"
+    },
+    {
+      "id": "transitions-pro-image-open-tilt",
+      "name": "Image open tilt",
+      "source": "Transitions.dev · Pro",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/pro.html",
+      "license": "Restricted / purchase required",
+      "status": "restricted",
+      "kind": "external",
+      "category": "Motion · Pro",
+      "description": "Image open tilt 是 Transitions.dev Pro 受限组件；本地仅保留索引。",
+      "useWhen": "已合法购买并将源码放入本地后再接入",
+      "avoidWhen": "未获得 Pro 下载权限时不要复制或生成替代源码",
+      "importPath": null,
+      "exports": [],
+      "dependencies": [],
+      "props": [],
+      "example": "",
+      "externalUrl": "https://transitions.dev/detail.html?t=image-open-tilt"
+    },
+    {
+      "id": "transitions-pro-spinner-to-check-morph",
+      "name": "Spinner to check morph",
+      "source": "Transitions.dev · Pro",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/pro.html",
+      "license": "Restricted / purchase required",
+      "status": "restricted",
+      "kind": "external",
+      "category": "Motion · Pro",
+      "description": "Spinner to check morph 是 Transitions.dev Pro 受限组件；本地仅保留索引。",
+      "useWhen": "已合法购买并将源码放入本地后再接入",
+      "avoidWhen": "未获得 Pro 下载权限时不要复制或生成替代源码",
+      "importPath": null,
+      "exports": [],
+      "dependencies": [],
+      "props": [],
+      "example": "",
+      "externalUrl": "https://transitions.dev/detail.html?t=spinner-to-check-morph"
+    },
+    {
+      "id": "transitions-pro-pro-gradient-text",
+      "name": "Pro gradient text",
+      "source": "Transitions.dev · Pro",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/pro.html",
+      "license": "Restricted / purchase required",
+      "status": "restricted",
+      "kind": "external",
+      "category": "Motion · Pro",
+      "description": "Pro gradient text 是 Transitions.dev Pro 受限组件；本地仅保留索引。",
+      "useWhen": "已合法购买并将源码放入本地后再接入",
+      "avoidWhen": "未获得 Pro 下载权限时不要复制或生成替代源码",
+      "importPath": null,
+      "exports": [],
+      "dependencies": [],
+      "props": [],
+      "example": "",
+      "externalUrl": "https://transitions.dev/detail.html?t=pro-gradient-text"
+    },
+    {
+      "id": "transitions-pro-delete-with-smoky-dissolve",
+      "name": "Delete with smoky dissolve",
+      "source": "Transitions.dev · Pro",
+      "author": "Jakub Antalik",
+      "sourceUrl": "https://transitions.dev/pro.html",
+      "license": "Restricted / purchase required",
+      "status": "restricted",
+      "kind": "external",
+      "category": "Motion · Pro",
+      "description": "Delete with smoky dissolve 是 Transitions.dev Pro 受限组件；本地仅保留索引。",
+      "useWhen": "已合法购买并将源码放入本地后再接入",
+      "avoidWhen": "未获得 Pro 下载权限时不要复制或生成替代源码",
+      "importPath": null,
+      "exports": [],
+      "dependencies": [],
+      "props": [],
+      "example": "",
+      "externalUrl": "https://transitions.dev/detail.html?t=delete-with-smoky-dissolve"
+    }
+  ]
+}
